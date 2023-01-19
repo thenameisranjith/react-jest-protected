@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* h1{
+    color: cornflowerblue;
+    text-align: center;
+    padding: 10px;
+} */
+.booklist{
+    display: flex;
+  justify-content: space-evenly;
+}
+
+.booklist h3,h4{
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 15px;
+}
+
+.booklist h3{
+   color: red;
+   font-weight: 600;
+}
+   
+/* button{
+    background-color: black;
+    color: white;
+    padding:10px 10px  10px 10px;
+    font-weight: 900;
+    border-radius: 10px;
+    border: 1px solid red;
+    margin-bottom: 10px;
+} */
+
+
+@media screen and (max-width: 900px) {
+    .booklist  {
+     flex-direction: column;
+    margin: 30%;
+      width: 100%;
+    }
+  }
