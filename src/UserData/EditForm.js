@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const EditForm = (props) => {
-  const { editUser, changeHeading } = props;
-  const initialFormState = { id: null, name: "", role: "" };
+  const { editUser, changeHeading, upDateUser } = props;
   const [user, setUser] = useState(editUser);
-  console.log("IN  LINE NO 5 ", user);
 
   useEffect(() => {
     setUser(editUser);
@@ -12,8 +10,7 @@ const EditForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!user.name || !user.role) return;
-    setUser(initialFormState);
+    upDateUser(user.id, user);
   };
 
   const handleInputChange = (event) => {
@@ -39,7 +36,6 @@ const EditForm = (props) => {
         />
         <br />
         <label>Role</label>
-
         <input
           type="text"
           name="role"
@@ -48,6 +44,7 @@ const EditForm = (props) => {
         />
         <br />
         <button>Edit Employee</button>
+        &nbsp;
         <button onClick={() => handleClear()}>Cancel</button>
       </form>
     </div>

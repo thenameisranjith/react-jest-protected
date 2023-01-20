@@ -5,12 +5,11 @@ import UseStateExample from "./container/UseStateExample";
 import CallBackBasic from "./container/CallBackBasic";
 import UseEffectExample from "./container/UseEffectExample";
 import FirstExample from "./component/FirstExample";
-import Birthday from "./Birthday/Birthday";
 import Parent from "./pureComponent/Parent";
 import Timer from "./component/Timer";
 import LoginPage from "./component/LoginComponent";
 import HomePage from "./component/HomePage";
-import UserCard from "./container/UserCard";
+
 import ProctectdRoute from "./ProctectdRoute";
 import UseAuth from "./UseAuth";
 import Home from "./Memo/Home";
@@ -18,8 +17,10 @@ import First from "./UseMemo/First";
 import Counter from "./component/Counter";
 import EmployeeForm from "./UserData/EmployeeForm";
 // import ButtonNameDisplay from "./container/ButtonNameDisplay"
-import Dropdown from "./component/Dropdown";
-import FormData from "./container/FormData";
+import Dropdown from "./TestingComponents/Dropdown";
+import FormData from "./TestingComponents/FormData";
+import UserCard from "./TestingComponents/UserCard";
+import LoginTest from "./TestingComponents/LoginTest";
 function App() {
   const [isAuth, logIn, logOut] = UseAuth(false);
   return (
@@ -49,7 +50,6 @@ function App() {
         <Route path="/useStateExample" component={UseStateExample} exact />
         <Route path="/useeffectexample" component={UseEffectExample} exact />
         <Route path="/firstexample" component={FirstExample} exact />
-        <Route path="/Birthday" component={Birthday} exact />
         <Route path="/timer" component={Timer} exact />
         <Route path="/parent" component={Parent} exact />
         <Route path="/loginpage" component={LoginPage} exact />
@@ -60,6 +60,7 @@ function App() {
         <Route path="/counter" component={Counter} exact />
         <Route path="/empfor" component={EmployeeForm} />
         <Route path="/dropdown" component={Dropdown} />
+        <Route path="/login-test" component={LoginTest} />
         {/* <Route path="/book" component={Book} exact /> */}
         <ProctectdRoute path="/book" component={First} auth={isAuth} />
         <Route path="/" component={HomePage} exact />
