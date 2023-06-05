@@ -21,6 +21,7 @@ import Dropdown from "./TestingComponents/Dropdown";
 import FormData from "./TestingComponents/FormData";
 import UserCard from "./TestingComponents/UserCard";
 import LoginTest from "./TestingComponents/LoginTest";
+import CounterTest from "./TestingComponents/CounterTest";
 function App() {
   const [isAuth, logIn, logOut] = UseAuth(false);
   return (
@@ -61,6 +62,7 @@ function App() {
         <Route path="/empfor" component={EmployeeForm} />
         <Route path="/dropdown" component={Dropdown} />
         <Route path="/login-test" component={LoginTest} />
+        <Route path="/countertest" component={CounterTest} />
         {/* <Route path="/book" component={Book} exact /> */}
         <ProctectdRoute path="/book" component={First} auth={isAuth} />
         <Route path="/" component={HomePage} exact />
